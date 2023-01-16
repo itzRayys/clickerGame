@@ -47,3 +47,6 @@ TagManager:
   - name: dog
     uniqueID: 2843710343
     locked: 0
+  - name: menu
+    uniqueID: 1095831699
+    locked: 0

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class woof : MonoBehaviour
 {
+    public countInt countInt;
     public textUpdate textUpdate;
 
     public int moneyPerClick;
@@ -17,10 +18,10 @@ public class woof : MonoBehaviour
 
     public void woofClick()
     {
-        textUpdate.woofCount += 1;
+        countInt.woofCount += 1;
         textUpdate.updateWoofText();
 
-        textUpdate.moneyCount = textUpdate.moneyCount + moneyPerClick;
+        countInt.moneyCount = countInt.moneyCount + moneyPerClick;
         textUpdate.updateMoneyText();
 
 
