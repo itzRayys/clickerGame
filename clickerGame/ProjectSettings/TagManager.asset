@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - click
-  - 
+  - map
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: menu
     uniqueID: 1095831699
+    locked: 0
+  - name: blur
+    uniqueID: 2432211409
     locked: 0
