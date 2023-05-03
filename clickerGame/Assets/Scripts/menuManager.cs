@@ -21,58 +21,53 @@ public class menuManager : MonoBehaviour
 
 
     [Space(10)]
-    [Header("References")]
+    [Header("Other")]
     public moveToMouse playerMove;
+    public bool isMenuOpened = false;
 
 
-
+    // add something to disable movement when opening a menu
+    // figure out exit timer in interactableExitLocation
     public void openShop()
     {
-        disableMovement();
         gameMenu.SetActive(false);
         shopManager.resetScrollPositions();
         shopMenu.SetActive(true);
+        isMenuOpened = true;
     }
     public void closeShop()
     {
         shopMenu.SetActive(false);
         gameMenu.SetActive(true);
+        isMenuOpened = false;
     }
 
-    
+
     public void openInventory()
     {
-        disableMovement();
         gameMenu.SetActive(false);
         inventoryManager.resetScrollPositions();
         inventoryMenu.SetActive(true);
+        isMenuOpened = true;
     }
     public void closeInventory()
     {
         inventoryMenu.SetActive(false);
         gameMenu.SetActive(true);
+        isMenuOpened = false;
     }
 
 
     public void openMap()
     {
-        disableMovement();
         gameMenu.SetActive(false);
         mapMenu.SetActive(true);
+        isMenuOpened = true;
     }
     public void closeMap()
     {
         mapMenu.SetActive(false);
         gameMenu.SetActive(true);
-    }
-
-
-    private void disableMovement()
-    {
-        playerMove.isMove = false;
-    }
-    private void enableMovement()
-    {
-        playerMove.isMove = true;
+        isMenuOpened = false;
     }
 }

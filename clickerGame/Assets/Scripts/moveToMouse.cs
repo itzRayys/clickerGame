@@ -14,13 +14,16 @@ public class moveToMouse : MonoBehaviour
     public float moveSpeedFar;
     public float followToggleRadius = 0.25f;
 
-    private float moveSpeed;
+    [Space(15)]
+    [Header("Other")]
     public bool isMove = false;
+    public menuManager menuManager;
+    private float moveSpeed;
 
     private void Update()
     {
-        movePlayer();
         toggleMove();
+        movePlayer();
     }
 
 
@@ -50,20 +53,28 @@ public class moveToMouse : MonoBehaviour
 
         }
     }
-    private void toggleMove()
+    public void toggleMove()
     {
-        if (Vector2.Distance(playerPosition.position,
-            Camera.main.ScreenToWorldPoint(Input.mousePosition))
-            <= followToggleRadius && Input.GetMouseButtonDown(0))
+        if (!menuManager.isMenuOpened)
         {
-            if (isMove)
+            if (Vector2.Distance(playerPosition.position,
+                Camera.main.ScreenToWorldPoint(Input.mousePosition))
+                <= followToggleRadius && Input.GetMouseButtonDown(0))
             {
-                isMove = false;
-            }
-            else
-            {
-                isMove = true;
+                if (isMove)
+                {
+                    isMove = false;
+                }
+                else
+                {
+                    isMove = true;
+                }
             }
         }
+        else
+        {
+            isMove = false;
+        }
     }
+
 }

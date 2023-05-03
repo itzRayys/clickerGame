@@ -50,6 +50,6 @@ TagManager:
   - name: menu
     uniqueID: 1095831699
     locked: 0
-  - name: blur
+  - name: ui popups
     uniqueID: 2432211409
     locked: 0
