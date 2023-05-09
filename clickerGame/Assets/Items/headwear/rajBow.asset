@@ -9,11 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e300c34e073aee246b35f3c265e334e8, type: 3}
+  m_Script: {fileID: 11500000, guid: be5ad88c9e73c9648b29e469534e5933, type: 3}
   m_Name: rajBow
   m_EditorClassIdentifier: 
   itemName: Raj Bow
-  itemSprite: {fileID: 0}
+  itemIcon: {fileID: 0}
   itemCost: 124
   itemID: 3
-  isOwned: 1
+  isOwned: 0
+  itemSprite: {fileID: 0}
+  itemPosition: {x: 0, y: 0}
+  itemRotation: {x: 0, y: 0}
+  itemScale: {x: 0, y: 0}
+  itemSlot: 0
+  isEquipped: 0

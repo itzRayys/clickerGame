@@ -16,4 +16,6 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: 9a570e25249cb1f4e96476823a42b505, type: 3}
   itemCost: 2500
   itemID: 6
+  itemType: background
   isOwned: 0
+  isEquipped: 0

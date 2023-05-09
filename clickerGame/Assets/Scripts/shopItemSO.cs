@@ -7,5 +7,7 @@ public class shopItemSO : ScriptableObject
     public Sprite itemSprite;
     public int itemCost;
     public int itemID;
+    public string itemType;
     public bool isOwned = false;
+    public bool isEquipped = false;
 }

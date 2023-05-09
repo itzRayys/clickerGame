@@ -9,11 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e300c34e073aee246b35f3c265e334e8, type: 3}
+  m_Script: {fileID: 11500000, guid: be5ad88c9e73c9648b29e469534e5933, type: 3}
   m_Name: redBow
   m_EditorClassIdentifier: 
   itemName: Red Bow
-  itemSprite: {fileID: 21300000, guid: c886760f5c3543b4c903c54f298abc92, type: 3}
+  itemIcon: {fileID: 21300000, guid: c886760f5c3543b4c903c54f298abc92, type: 3}
   itemCost: 200
   itemID: 4
   isOwned: 1
+  itemSprite: {fileID: 0}
+  itemPosition: {x: 0, y: 0}
+  itemRotation: {x: 0, y: 0}
+  itemScale: {x: 0, y: 0}
+  itemSlot: 0
+  isEquipped: 0

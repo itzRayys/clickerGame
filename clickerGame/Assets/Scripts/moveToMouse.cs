@@ -6,6 +6,12 @@ public class moveToMouse : MonoBehaviour
     [Header("Transforms")]
     public Transform playerPosition;
     public Transform playerSpritePosition;
+    public Transform playerClothingHeadpieceSprite;
+    public Transform playerClothingTopSprite;
+    public Transform playerClothingBottomSprite;
+    public Transform playerClothingFootwearSprite;
+    public Transform playerClothingAccessory1Sprite;
+    public Transform playerClothingAccessory2Sprite;
 
     [Space(15)]
     [Header("Floats")]
@@ -18,6 +24,7 @@ public class moveToMouse : MonoBehaviour
     [Header("Other")]
     public bool isMove = false;
     public menuManager menuManager;
+    public playerEquippedItems playerEquippedItems;
     private float moveSpeed;
 
     private void Update()
@@ -50,7 +57,18 @@ public class moveToMouse : MonoBehaviour
             playerPosition.position = Vector2.MoveTowards(playerPosition.position,
                 targetPosition, moveSpeed * Time.deltaTime);
             playerSpritePosition.position = playerPosition.position;
-
+            playerClothingHeadpieceSprite.position = playerPosition.position +
+                playerEquippedItems.equippedHeadpiecePosition;
+            playerClothingTopSprite.position = playerPosition.position +
+                playerEquippedItems.equippedTopPosition;
+            playerClothingBottomSprite.position = playerPosition.position +
+                playerEquippedItems.equippedBottomPosition;
+            playerClothingFootwearSprite.position = playerPosition.position +
+                playerEquippedItems.equippedFootwearPosition;
+            playerClothingAccessory1Sprite.position = playerPosition.position +
+                playerEquippedItems.equippedAccessory1Position;
+            playerClothingAccessory2Sprite.position = playerPosition.position +
+                playerEquippedItems.equippedAccessory2Position;
         }
     }
     public void toggleMove()

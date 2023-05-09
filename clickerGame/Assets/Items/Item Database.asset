@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: Item Database
   m_EditorClassIdentifier: 
   listOfItems:
-  - {fileID: 11400000, guid: 21d874e98f6313546bf1eff88073cc8d, type: 2}
-  - {fileID: 11400000, guid: 4cff2bfb710242a42a589f3d4596a4d9, type: 2}
-  - {fileID: 11400000, guid: 482194365d497904fbd3faac45bb1542, type: 2}
-  - {fileID: 11400000, guid: c99a3537218e7f341a54cd81bfe4890f, type: 2}
-  - {fileID: 11400000, guid: cccb7abdf7a045947a794129a08a12fa, type: 2}
-  - {fileID: 11400000, guid: 7746a2d62ee1f594c9f57955875bcffb, type: 2}
-  - {fileID: 11400000, guid: 029ded9797c6faf46ae4f4a77ee53b58, type: 2}
-  - {fileID: 11400000, guid: f935983d32083004cb3f2e9c969ab4ec, type: 2}
+  - {fileID: 11400000, guid: 0f2939ea6a231e846956ae1d56e79a0b, type: 2}
+  - {fileID: 11400000, guid: 28b994df8989c6c44bea311cbe6f847d, type: 2}
+  - {fileID: 11400000, guid: 123c65933b0f7c74c9f2b27f444a1e5e, type: 2}
+  - {fileID: 11400000, guid: c5d601d71825adb4a9519025b162942f, type: 2}
+  - {fileID: 11400000, guid: 231665da80dd45340ada37d90e79b0c8, type: 2}
