@@ -16,7 +16,6 @@ public class itemDatabase : ScriptableObject
 
     public void fillItemLists()
     {
-        Debug.Log("Starting item list sorting.");
         clearItemLists();
         float currentItemCount = 0;
         foreach (var item in listOfItems)
@@ -46,7 +45,6 @@ public class itemDatabase : ScriptableObject
                         break;
                 }
             }
-            Debug.Log((currentItemCount / listOfItems.Count) * 100 + "%");
         }
         Debug.Log("Items sorted!");
     }

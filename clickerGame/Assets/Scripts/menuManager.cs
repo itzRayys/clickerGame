@@ -12,12 +12,14 @@ public class menuManager : MonoBehaviour
     public GameObject shopMenu;
     public GameObject inventoryMenu;
     public GameObject mapMenu;
+    public GameObject settingsMenu;
 
 
     [Space(10)]
     [Header("Managers")]
     public shopManager shopManager;
     public inventoryManager inventoryManager;
+    public settingsManager settingsManager;
 
 
     [Space(10)]
@@ -67,6 +69,21 @@ public class menuManager : MonoBehaviour
     public void closeMap()
     {
         mapMenu.SetActive(false);
+        gameMenu.SetActive(true);
+        isMenuOpened = false;
+    }
+
+
+    public void openSettings()
+    {
+        gameMenu.SetActive(false);
+        settingsManager.resetSettingsSubmenuSelection();
+        settingsMenu.SetActive(true);
+        isMenuOpened = true;
+    }
+    public void closeSettings()
+    {
+        settingsMenu.SetActive(false);
         gameMenu.SetActive(true);
         isMenuOpened = false;
     }

@@ -7,6 +7,7 @@ public class woof : MonoBehaviour
 {
     public countInt countInt;
     public textUpdate textUpdate;
+    public audioManager audioManager;
 
     public int moneyPerClick;
 
@@ -24,11 +25,12 @@ public class woof : MonoBehaviour
         countInt.moneyCount = countInt.moneyCount + moneyPerClick;
         textUpdate.updateMoneyText();
 
-
-
+        randomWoof();
     }
 
-
-
-
+    private void randomWoof()
+    {
+        int randomNumber = Random.Range(1, 9);
+        audioManager.Play("testDogBark" +  randomNumber);
+    }
 }
