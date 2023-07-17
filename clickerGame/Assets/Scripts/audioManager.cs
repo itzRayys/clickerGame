@@ -23,8 +23,6 @@ public class audioManager : MonoBehaviour
     }
 
 
-
-
     public List<sound> soundEffects;
 
     public static audioManager instance;

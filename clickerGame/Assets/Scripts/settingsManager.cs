@@ -7,12 +7,7 @@ public class settingsManager : MonoBehaviour
 {
     public menuManager menuManager;
     public settingsVolumeChange settingsVolumeChange;
-    
-
-
-
-
-
+    public settingsTextUpdate settingsTextUpdate;
 
 
     [Space(15)]
@@ -32,6 +27,12 @@ public class settingsManager : MonoBehaviour
     public GameObject subSettingsAccessibilityGO;
 
     private int openedSubSettings;
+
+    private void Start()
+    {
+        settingsTextUpdate.updateSettingsText();
+    }
+
 
     public void openSubSettings(int buttonNumber)
     {
