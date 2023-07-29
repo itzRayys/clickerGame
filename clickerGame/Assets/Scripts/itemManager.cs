@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class itemManager : MonoBehaviour
 {
     public itemDatabase itemDatabase;
-
 
     private static itemManager instance;
 

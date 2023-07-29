@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class titleMenuManager : MonoBehaviour
 {
+    public titleSettingsScript settingsScript;
+    public savesScript savesScript;
+
+    public GameObject mainMenuGO;
+    public GameObject savesMenuGO;
     public GameObject exitConfirmation;
     public GameObject settingsMenu;
     public GameObject settingsSaveMenu;
-    public titleSettingsScript settingsScript;
+
+
+    public void playGame()
+    {
+        mainMenuGO.SetActive(false);
+        savesScript.resetScrollPositions();
+        savesMenuGO.SetActive(true);
+    }
+    public void backToMainMenu()
+    {
+        savesMenuGO.SetActive(false);
+        mainMenuGO.SetActive(true);
+    }
 
     public void openExitConfirmation()
     {
@@ -27,22 +44,35 @@ public class titleMenuManager : MonoBehaviour
     {
         settingsMenu.SetActive(true);
     }
-    public void closeSettingsUnchanged()
+    public void closeSettings()
     {
-        settingsMenu.SetActive(false);
+        if (settingsScript.isSettingsChanged)
+        {
+            settingsSaveMenu.SetActive(true);
+        }
+        else
+        {
+            settingsMenu.SetActive(false);
+        }
     }
-    public void closeSettingsChanged()
-    {
-        settingsSaveMenu.SetActive(true);
-    }
-
     public void settingsSaveApply()
     {
         settingsScript.saveSettings();
-        settingsSaveClose();
+    }
+    public void settingsSaveApplyAndClose()
+    {
+        settingsScript.saveSettings();
+        settingsSaveMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
     public void settingsSaveClose()
     {
         settingsSaveMenu.SetActive(false);
+    }
+    public void settingsSaveIgnoreAndClose()
+    {
+        settingsScript.onRestoredOrSavedSettings();
+        settingsSaveMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 }

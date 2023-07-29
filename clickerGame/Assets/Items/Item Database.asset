@@ -18,3 +18,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 123c65933b0f7c74c9f2b27f444a1e5e, type: 2}
   - {fileID: 11400000, guid: c5d601d71825adb4a9519025b162942f, type: 2}
   - {fileID: 11400000, guid: 231665da80dd45340ada37d90e79b0c8, type: 2}
+  - {fileID: 11400000, guid: fbf8d17a5fdc7ad41bb15ce30c64b3f5, type: 2}
+  itemListHeadwear:
+  - {fileID: 11400000, guid: 0f2939ea6a231e846956ae1d56e79a0b, type: 2}
+  - {fileID: 11400000, guid: 28b994df8989c6c44bea311cbe6f847d, type: 2}
+  - {fileID: 11400000, guid: 123c65933b0f7c74c9f2b27f444a1e5e, type: 2}
+  - {fileID: 11400000, guid: c5d601d71825adb4a9519025b162942f, type: 2}
+  - {fileID: 11400000, guid: 231665da80dd45340ada37d90e79b0c8, type: 2}
+  itemListTops: []
+  itemListBottoms: []
+  itemListFootwear: []
+  itemListAccessories: []

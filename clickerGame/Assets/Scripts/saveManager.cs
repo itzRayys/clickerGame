@@ -1,28 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class saveManager
+public class saveManager : MonoBehaviour
 {
-    /*loading=====
-     * right when game opens, do a soft load for nonsave specific things:
-     *          sound, video, controls, 
-     * also load save file previews
-     *          name, character, time played, 
-     * 
-     * once save selected, load into a scene persistent singleton
-     *         items locked/unlocked all in one []
-     *          maps unlocked in a []
-     *          achievements[]
-     *          player money
-     *          player stats
-     *          
-     *          lastLocation
-     *          itemsEquipped
-     *          
-     *          
-     *          gameData & playerData
-     *          
-     *          audioManagerPersistent
-    */
+    public mapManager map;
+    public countInt count;
+    public itemManager item;
+
+    public TextMeshProUGUI loadedDataText;
+
+    public void savePlayer()
+    {
+        saveSystem.savePlayer(map, count, item);
+    }
+
+    public void loadPlayer()
+    {
+        savePlayerData data = saveSystem.loadPlayer();
+
+        loadedDataText.text = "Current location: " + data.currentLocation.ToString() + " \n"
+            + "Woof count: " + data.woofCount.ToString() + " \n"
+            + "Money count: " + data.moneyCount.ToString() + " \n"
+            + "Items equipped: " + " \n"
+            + "      " + data.itemsEquipped[0] + " \n"
+            + "      " + data.itemsEquipped[1] + " \n"
+            + "      " + data.itemsEquipped[2] + " \n"
+            + "      " + data.itemsEquipped[3] + " \n"
+            + "      " + data.itemsEquipped[4] + " \n"
+            + "      " + data.itemsEquipped[5];
+    }
 }

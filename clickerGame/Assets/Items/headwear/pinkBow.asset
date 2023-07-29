@@ -22,4 +22,4 @@ MonoBehaviour:
   itemRotation: {x: 0, y: 0}
   itemScale: {x: 0, y: 0}
   itemSlot: 0
-  isEquipped: 0
+  isEquipped: 1
